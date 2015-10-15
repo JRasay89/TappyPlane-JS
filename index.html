@@ -1,0 +1,26 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title> Tappy Plane </title>
+		<!-- Phaser Library -->
+		<script src="js/phaser.min.js"></script>
+		<!-- JavaScript Files -->
+		<script src="js/boot.js"></script>
+		<script src="js/preloader.js"></script>
+		<script src="js/mainmenu.js"></script>
+		<script src="js/game.js"></script>
+		
+	</head>
+	<body>
+		<div id="game">
+		</div>
+		<script>
+			var game = new Phaser.Game(800, 480, Phaser.AUTO, "game");
+			game.state.add("Boot", TappyPlane.Boot);
+			game.state.add("Preloader", TappyPlane.PreLoader);
+			game.state.add("MainMenu", TappyPlane.MainMenu);
+			game.state.add("Game", TappyPlane.Game);
+			game.state.start("Boot");
+		</script>
+	</body>
+</html>
