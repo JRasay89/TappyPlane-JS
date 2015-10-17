@@ -97,8 +97,9 @@ TappyPlane.Game.prototype = {
 	},
 	
 	update: function() {
-		if (this.myPlane_.alive == false)
+		if (this.myPlane_.alive == false) {
 			return;
+		}
 		//Collision ground
 		this.game.physics.arcade.overlap(this.myPlane_, this.ground_, this.crashHandler, null, this);
 		//Collision Mountaint peaks
@@ -106,6 +107,11 @@ TappyPlane.Game.prototype = {
 			this.updateScore(peaksGroup);
 			this.game.physics.arcade.overlap(this.myPlane_, peaksGroup, this.crashHandler, null, this);
 		}, this);
+		//Check if plane is still in world
+		if (!this.myPlane_.inWorld) {
+			this.crashHandler();
+		}
+		
 		this.myPlane_.rotatePlane();
 	},
 	
