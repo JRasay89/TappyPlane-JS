@@ -1,0 +1,17 @@
+body, html {
+	width: 100%;
+	height: 100%;
+	background-color: #93D3FA;
+	overflow: hidden;	
+}
+
+#game {
+	position: relative;
+	width: 800px;
+	height: 480px;
+	margin: auto;
+	top: 25%;
+	border-color: #2C3F4B;
+	border-style: solid;
+	
+}
