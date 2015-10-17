@@ -3,7 +3,9 @@ var TappyPlane = {
 	HEIGHT_: 480
 };
 
-TappyPlane.Boot = function(game){};
+TappyPlane.Boot = function(game){
+	this.game = game;
+};
 
 TappyPlane.Boot.prototype = {
 	preload: function() {
